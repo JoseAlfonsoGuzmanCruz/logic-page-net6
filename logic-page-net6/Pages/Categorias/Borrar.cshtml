@@ -1,0 +1,35 @@
+﻿@page
+@model logic_page_net6.Pages.Categorias.BorrarModel
+@{
+    ViewData["Title"] = "Borrar categoria";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h2 class="text-info">Borrar una categoria</h2>
+
+            <form method="post">
+
+                <input type="hidden" asp-for="Categorias.Id" />
+
+                <div class="mb-3">
+                    <label asp-for="Categorias.Nombre" class="form-label"></label>
+                    <input asp-for="Categorias.Nombre" class="form-control" placeholder="Ingresa el nombre" readonly/>
+                    <span asp-validation-for="Categorias.Nombre" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Categorias.FechaCreacion" class="form-label"></label>
+                    <input asp-for="Categorias.FechaCreacion" class="form-control" readonly/>
+                    <span asp-validation-for="Categorias.FechaCreacion" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Borrar categoria</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <a asp-page="Index" class="btn btn-success">Volver</a>
+        </div>
+    </div>
+</div>

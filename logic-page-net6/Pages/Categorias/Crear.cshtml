@@ -1,0 +1,35 @@
+﻿@page
+@model logic_page_net6.Pages.Categorias.CrearModel
+@{
+    ViewData["Title"] = "Crear una categoria";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h2 class="text-info">Crear una nueva categoria</h2>
+            <form method="post">
+                <div class="mb-3">
+                    <label asp-for="Categorias.Nombre" class="form-label"></label>
+                    <input asp-for="Categorias.Nombre" class="form-control" placeholder="Ingrese el nombre" />
+                    <span asp-validation-for="Categorias.Nombre" class="text-danger"> </span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Categorias.FechaCreacion" class="form-label"> </label>
+                    <input asp-for="Categorias.FechaCreacion" class="form-control" />
+                    <span asp-validation-for="Categorias.FechaCreacion" class="text-danger"> </span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Crear categoria</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <a asp-page="Index" class="btn btn-success">Volver</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,26 @@
+﻿@page
+@model logic_page_net6.Pages.DetalleModel
+@{
+    ViewData["Title"] = "Detalle de categoria";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+            
+            
+            <h2 class="text-info">Detalle de categoria: @Html.DisplayFor(m=>m.Categorias.Id)</h2>
+
+            <ul class="list-group">
+                <li class="list-group-item">ID: @Html.DisplayFor(m=>m.Categorias.Id)</li>
+                <li class="list-group-item">Nombre: @Html.DisplayFor(m=>m.Categorias.Nombre)</li>
+                <li class="list-group-item">Fecha decreacion: @Html.DisplayFor(m=>m.Categorias.FechaCreacion)</li>
+            </ul>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <a asp-page="Index" class="btn btn-success">Volver</a>
+        </div>
+    </div>
+</div>
